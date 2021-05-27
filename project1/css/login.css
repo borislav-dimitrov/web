@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main_holder {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: gray;
+  flex: 1;
+  margin-top: 3em;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10em;
+}
+
+.login-holder {
+  background-color: lime;
+  width: 25%;
+  border-radius: 5px;
+  padding: 0.3em;
+  overflow: auto;
+}
+
+.info {
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.login-holder button {
+  margin-top: 0.1em;
+}
+
+.login-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.labels {
+  float: left;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  align-items: flex-end;
+  padding-right: 1em;
+}
+
+.inputs {
+  float: left;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs input {
+  width: 60%;
+}
+
+.sign-up-section p {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.sign-up-section a {
+  text-decoration: none;
+  color: blue;
+}
