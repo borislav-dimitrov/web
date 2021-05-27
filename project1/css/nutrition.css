@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main_holder {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: gray;
+  flex: 1;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+/*#region pick food*/
+.pick_food {
+  background-color: gray;
+  flex: 1;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+/*#region chose meal*/
+.choose_meal {
+  float: left;
+  width: 10%;
+  min-width: 100px;
+  background-color: teal;
+  padding: 0.5em;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.meal_check {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.meal_check li {
+  position: relative;
+  padding-top: 1em;
+}
+
+.meal_check input[type="radio"] {
+  opacity: 0.01;
+}
+
+.meal_check input[type="radio"]:checked + label,
+.Checked + label {
+  background: yellow;
+}
+
+.meal_check label {
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.meal_check label:hover {
+  background-color: gray;
+}
+
+/*#endregion*/
+
+.food_preview {
+  float: right;
+  width: 80%;
+  background-color: lightblue;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 5px;
+}
+/*#endregion*/
+
+/*#region total*/
+.track_daily {
+  /*flex: 1; */
+  background-color: purple;
+  padding: 1em;
+}
+
+/*#region nutrition graphic*/
+.total_nutrition_for_the_day {
+  background-color: violet;
+  float: left;
+  width: 65%;
+  text-align: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.graphic_titles {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.graphic_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.calories {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+}
+
+.protein {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+}
+
+.fat {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+}
+
+.carbohydrates {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+}
+
+.sugar {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 4fr 0.5fr 0.5fr;
+}
+
+.current_nutrition {
+  padding-right: 0.3em;
+}
+
+.draw_curr_to_desired_nutrition {
+  background-color: teal;
+  border-radius: 7px;
+}
+
+.desired_nutrition {
+  padding-left: 0.3em;
+}
+/*#endregion*/
+
+/*#region track water*/
+.track_water {
+  width: 15%;
+  float: right;
+  background-color: rgb(171, 171, 248);
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track_water p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/*#region draw glass*/
+.glass {
+  float: left;
+  background-color: rgb(88, 88, 255);
+  height: 8em;
+  width: 7em;
+  border-radius: 10px 10px 40px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+.glass p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*#endregion*/
+/*#endregion*/
+/*#endregion*/
