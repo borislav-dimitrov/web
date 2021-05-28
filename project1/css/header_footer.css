@@ -8,6 +8,7 @@
 }
 
 .logo {
+  position: absolute;
   float: left;
   width: 10%;
   display: flex;

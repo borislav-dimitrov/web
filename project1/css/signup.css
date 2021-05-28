@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main_holder {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: gray;
+  flex: 1;
+  padding: 1em;
+  margin-top: 3em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  background-color: lime;
+  width: 50%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.user-information {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0fr 1fr;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 0.2em;
+  line-height: 1.5;
+}
+
+.forms input {
+  margin-top: 0.2em;
+}
+
+.measurements {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 0.2em;
+  line-height: 1.6;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 0.2em;
+  line-height: 1.6;
+}
+
+.user-information-2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.labels-2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 0.2em;
+  line-height: 1.5;
+}
+
+.forms-2 {
+  margin-top: 0.2em;
+}

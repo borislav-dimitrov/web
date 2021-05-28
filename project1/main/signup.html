@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="test123">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="icon" href="">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main_holder">
+        <div class="header_holder">
+
+            <div class="logo">
+                <p>logo</p>
+            </div>
+
+
+            <div class="header">
+                <div class="button1">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="../index.html">Home</a>
+                        <div class="dropdown-content">
+                            <a href="./login.html">Log in</a>
+                            <a href="#">Profile</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button2">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="./nutrition_track.html">Nutrition</a>
+                        <div class="dropdown-content">
+                            <a href="./nutrition_track.html">Nutrition tracking</a>
+                            <a href="./food_database.html">Food Database</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button3">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="#">I don't know</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+
+        <div class="main">
+           <div class="sign-up-form">
+                <div class="text-info">
+                    <h2>Let us know about you</h2>
+                    <p>We will use this information to create a personalized diet for you.</p>
+                </div>
+            
+                
+                <div class="user-information">
+                    <div class="labels">
+                        <label for="email">E-mail:</label>
+                        <label for="password">Password:</label>
+                        <label for="username">Username:</label>
+                        <label for="currweight">Current weight:</label>
+                        <label for="height">Height:</label>
+                        <label for="goal">Goal weight:</label>
+                        
+                    </div>
+
+                    <div class="forms">
+                        <input type="text" name="email" id="email">
+                        <input type="password" name="password" id="password">
+                        <input type="text" name="username" id="username">
+                        <input type="text" name="currweight" id="currweight">
+                        <input type="text" name="height" id="height">
+                        <input type="text" name="goal" id="goal">
+                        
+                    </div>
+                    
+                    <div class="measurements">
+                        <br>
+                        <input type="checkbox" name="showpwd" id="showpwd" onclick="showHidePwd()" >
+                        <br>
+                        <label for="currweight">kg</label>
+                        <label for="height">cm</label>
+                        <label for="goal">kg</label>
+                    </div>
+                    <div class="test">
+                        <br>
+                        <label for="showpwd">Show password</label>
+                    </div>
+
+                </div>
+
+                <div class="user-information-2">
+                    <div class="labels-2">
+                        <label for="month">Date of birth:</label>
+                        
+
+                    </div>
+
+                    <div class="forms-2">
+                        <select name="month" id="month">
+                            <option value="January">January</option>
+                        </select>
+
+                        <select name="day" id="day">
+                            <option value="1">1</option>
+                        </select>
+
+                        <select name="year" id="year">
+                            <option value="1920">1921</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="user-activities">
+                    <div class="input-3">
+                        <input type="radio" name="sedentary" id="sedentary">
+                        <input type="radio" name="lightly" id="lightly">
+                        <input type="radio" name="active" id="active">
+                        <input type="radio" name="very" id="very">
+                    </div>
+
+                    <div class="labels-3">
+                        <label for="sedentary">Sedentary: Spend most of the day sitting (e.g. bank teller, desk job)</label>
+                        <label for="lightly">Lightly Active: Spend a good part of the day on your feet (e.g. teacher, salesperson)</label>
+                    </div>
+                </div>
+           </div>
+
+        </div>
+
+        <div class="footer_holder">
+            <div class="footer">
+                <h1>test footer</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="../scripts/signup.js">
+    
+</script>
+
+</html>

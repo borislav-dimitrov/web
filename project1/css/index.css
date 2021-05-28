@@ -16,36 +16,29 @@ body {
   flex: 1;
   margin-top: 3em;
   padding: 1em;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
 }
 
 .welcome-text-holder {
-  float: left;
-  width: 59%;
-  margin-left: 10%;
-  margin-right: 10%;
   padding: 0.5em;
   background-color: lime;
-  border-radius: 5px;
   text-align: center;
   align-items: center;
   align-content: center;
 }
 
 .banner-left {
-  float: left;
-  width: 10%;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   text-align: center;
   align-items: center;
   align-content: center;
 }
 
 .banner-right {
-  float: left;
-  width: 10%;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
   text-align: center;
   align-items: center;
   align-content: center;
