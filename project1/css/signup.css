@@ -81,3 +81,39 @@ body {
 .forms-2 {
   margin-top: 0.2em;
 }
+
+.user-activities {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.labels-3 {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.input-3 {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.2em;
+  align-items: flex-end;
+  row-gap: 0.4em;
+}
+
+.user-goal {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.goal-labels {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 0.2em;
+  line-height: 1.5;
+}
+
+.goal-forms {
+  margin-top: 0.2em;
+}

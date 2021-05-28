@@ -72,7 +72,7 @@
                         <label for="username">Username:</label>
                         <label for="currweight">Current weight:</label>
                         <label for="height">Height:</label>
-                        <label for="goal">Goal weight:</label>
+                        <label for="goal weight">Goal weight:</label>
                         
                     </div>
 
@@ -82,7 +82,7 @@
                         <input type="text" name="username" id="username">
                         <input type="text" name="currweight" id="currweight">
                         <input type="text" name="height" id="height">
-                        <input type="text" name="goal" id="goal">
+                        <input type="text" name="goal weight" id="goal weight">
                         
                     </div>
                     
@@ -125,17 +125,32 @@
                 
                 <div class="user-activities">
                     <div class="input-3">
-                        <input type="radio" name="sedentary" id="sedentary">
-                        <input type="radio" name="lightly" id="lightly">
-                        <input type="radio" name="active" id="active">
-                        <input type="radio" name="very" id="very">
+                        <input type="radio" name="activity" id="sedentary">
+                        <input type="radio" name="activity" id="lightly">
+                        <input type="radio" name="activity" id="active">
+                        <input type="radio" name="activity" id="very">
                     </div>
 
                     <div class="labels-3">
                         <label for="sedentary">Sedentary: Spend most of the day sitting (e.g. bank teller, desk job)</label>
                         <label for="lightly">Lightly Active: Spend a good part of the day on your feet (e.g. teacher, salesperson)</label>
+                        <label for="active">Active: Spend a good part of the day doing some physical activity (e.g. food server, postal carrier)</label>
+                        <label for="very">Very Active: Spend most of the day doing heavy physical activity (e.g. bike messenger, carpenter)</label><br>
                     </div>
                 </div>
+
+                <div class="user-goal">
+                    <div class="goal-labels">
+                        <label for="goal">What is your goal?</label>
+                    </div>
+
+                    <div class="goal-forms">
+                        <select name="goal" id="goal">
+                            <option value="x">lose x kilgoram per week</option>
+                        </select>
+                    </div>
+                </div>
+
            </div>
 
         </div>
