@@ -147,6 +147,16 @@ body {
 .desired_nutrition {
   padding-left: 0.3em;
 }
+
+.current_as_percent {
+  background-color: lime;
+  transition: all 0.5s ease;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 0%;
+  max-width: 100%;
+  width: 0%;
+}
 /*#endregion*/
 
 /*#region track water*/
