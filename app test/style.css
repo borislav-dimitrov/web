@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "diablo";
+  src: url("diablo-webfont.woff2") format("woff2"),
+    url("diablo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(53, 51, 51);
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* margin: 0;
+  padding: 0;
+
+  top: 0;
+  left: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(53, 51, 51); */
+  /* overflow: hidden; */
+}
+
+.top-menu {
+  background-color: black;
+  height: 10%;
+  max-height: 180px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.side-menus-holder {
+  width: 25%;
+  /*height: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden; */
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  /* background-color: rgb(53, 51, 51);
+  /* height: 100%; */
+  /* width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  */
+}
+
+.heading-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; */
+}
+
+.heading {
+  color: rgb(255, 94, 0);
+  font-size: 35px;
+  font-family: "diablo";
+}
+
+.heading:hover {
+  cursor: default;
+}
+
+.runes-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 10px;
+
+  /* display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  padding: 50px 0px 0px 10px; */
+}
+
+.rune-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background-color: black;
+  width: 15%;
+  /* height: 40px; */
+  color: white;
+
+  border-radius: 50px;
+}
+
+.clear_btn {
+  width: 30% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background-color: black;
+  /* height: 40px; */
+  color: white;
+
+  border-radius: 50px;
+}
+
+.rune-holder:hover,
+.clear_btn:hover {
+  text-align: center;
+  cursor: pointer;
+  background-color: darkred;
+  color: red;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 3px red;
+}
+
+.rune-holder > p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 10px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+}
+
+table:hover {
+  box-shadow: 0px 0px 10px 2px red;
+}
+
+#preview_tbl {
+  width: 100%;
+}
+
+th {
+  border: 2.5px solid black;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+th:hover {
+  cursor: default;
+}
+
+td {
+  color: red;
+
+  margin-top: 0px;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+
+  /* background-color: rgb(53, 51, 51); */
+}
+
+.table_runewd_text {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.table_row:hover {
+  cursor: pointer;
+  background-color: darkred !important;
+}
+
+.rune-clicked {
+  text-align: center;
+  cursor: pointer;
+  background-color: darkred;
+  color: red;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 3px red;
+  font-weight: bold;
+}
+
+.rune-clear {
+  background-color: black;
+  color: white;
+}
+
+.completed-rwrd {
+  background-color: rgb(28, 59, 48);
+}
+
+.almost-completed {
+  background-color: rgba(114, 76, 7, 0.432);
+}
+
+.clear-btn-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  /* height: 5%; */
+}
+
+.content-menu-holder {
+  width: 74%;
+  padding-top: 5px;
+}
+
+.body-content1,
+.body-content2 {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  /* display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 100%; */
+}
+
+.bottom {
+  height: 10%;
+  background-color: black;
+}
+
+.filters-header {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+}
+
+#clear_filters_btn {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  height: 100%;
+}
+
+.filter-btns {
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  flex-wrap: wrap;
+  width: 50%;
+  gap: 5%;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.filter-btn {
+  width: 15%;
+  height: 20%;
+  background-color: darkred;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.filter-btn-clicked {
+  box-shadow: 0px 0px 10px 3px pink;
+}
+
+.filter-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 3px red;
+}
+
+.nav-menu {
+  width: 25%;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.runes-calc-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* height: 90%; */
+}
+
+.rune-calc-holder {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  width: 15%;
+  background-color: black;
+
+  border-radius: 20px;
+}
+
+.rune-calc-holder:hover {
+  cursor: pointer;
+  /* border: 2px solid red; */
+  box-shadow: 0px 0px 10px 4px red;
+  background-color: darkred;
+  color: red;
+}
+
+.custom-table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
+
+.custom-table p {
+  display: table-row;
+}
+
+.custom-table label {
+  display: table-cell;
+}
+
+.custom-table input {
+  display: table-cell;
+  background-color: black;
+  color: red;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.custom-table input:hover {
+  background-color: darkred;
+}
+
+/* Chrome, Safari, Edge, Opera remove num input arrows*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox remove num input arrows*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.calc-section {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  gap: 70px;
+}
+
+/* ----------- scroll bar ---------- */
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkred;
+  box-shadow: 0px 0px 10px 30px red;
+  border-radius: 1ex;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 0px 10px 30px red;
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}

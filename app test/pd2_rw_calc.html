@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="test123">
+    <meta name="robots" content="index,follow">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="">
+    <title> PD2 Runeword Calculator </title>
+
+
+
+</head>
+
+<body>
+
+    <div class='main'>
+
+        <div class="top-menu">
+            
+            <div class="nav-menu">
+                <button type="button" class="filter-btn" style="width: 100px; height: 40px;" onclick="homeBtn();">Home</button>
+                <button type="button" class="filter-btn" style="width: 100px; height: 40px;" onclick="calcRunesBtn();">Calc runes</button>
+            </div>
+
+            <div class="filters-header">
+                <p class="heading">Filters</p>
+                <div id="clear_filters_btn">
+                    <!-- <button style="width: 30%;" type="button"  class="filter-btn" onclick="filterTable('reset');">Reset</button> -->
+                    <div>
+                        <label for="search_bar" style="color: white; font-size: 18px;">Search rw by name</label>
+                        <input type="text" id="search_bar" onkeyup="nameSearchBarCheck(this.value)">
+                    </div>
+                </div>
+                <!-- <button type="button" onclick="reloadRunes();">test</button> -->
+            </div>
+            
+            <div class="filter-btns">
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'melee')">Melee Weapons</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'missile');">Ranged</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'body armor');">Body Armor</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'helms');">Head</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'shield');">Shields</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'aura');">Aura</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'res');">Resists</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'fcr');">FCR</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'life');">Life</button>
+                <button type="button" class="filter-btn" onclick="filterBtn(this,'mana');">Mana</button>
+                
+            </div>
+            
+        </div>
+
+        <div class="body-content1" id="body_content1">
+                
+            <div class="side-menus-holder">
+
+                <div class="side-menu">
+                    <div class="heading-holder">
+                        <a2 class="heading">Runes</a2>
+                    </div>
+
+                    <div class="runes-holder">
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">El</p>                            
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Eld</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Tir</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Nef</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Eth</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ith</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Tal</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ral</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ort</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Thul</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Amn</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Sol</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Shael</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Dol</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Hel</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Io</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Lum</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ko</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Fal</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Lem</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Pul</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Um</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Mal</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ist</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Gul</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Vex</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ohm</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Lo</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Sur</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Ber</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Jah</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Cham</p>
+                        </div>
+                        <div class="rune-holder" onclick="runeClick(this)">
+                            <p have="False">Zod</p>
+                        </div>                    
+                    </div>
+                    <div class="clear-btn-holder">
+                        <div class="clear_btn" onClick="clearAll(this)">
+                            <p>Clear All</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="content-menu-holder">
+                
+                <div class="content-menu">
+                    <table id="preview_tbl">
+                        <tr class="table-headers">
+                            <th class="heading">Name</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Rune</th>
+                            <th class="heading">Description</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class="body-content2" style="display: none;" id="body_content2">
+
+            <div class="body2-left" style="width: 50%;">
+                <div class="runes-calc-holder" >
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                                <label for="El_rune_count"> El </label>
+                                <input type="number" id="El_rune_count" style="width: 50px; height: 20px;" value="0"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"/>                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                                <label for="Eld_rune_count"> Eld </label>
+                                <input type="number" id="Eld_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Tir_rune_count"> Tir </label>
+                            <input type="number" id="Tir_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Nef_rune_count"> Nef </label>
+                            <input type="number" id="Nef_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Eth_rune_count"> Eth </label>
+                            <input type="number" id="Eth_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ith_rune_count"> Ith </label>
+                            <input type="number" id="Ith_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Tal_rune_count"> Tal </label>
+                            <input type="number" id="Tal_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ral_rune_count"> Ral </label>
+                            <input type="number" id="Ral_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ort_rune_count"> Ort </label>
+                            <input type="number" id="Ort_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Thul_rune_count"> Thul </label>
+                            <input type="number" id="Thul_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Amn_rune_count"> Amn </label>
+                            <input type="number" id="Amn_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Sol_rune_count"> Sol </label>
+                            <input type="number" id="Sol_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Shael_rune_count"> Shael </label>
+                            <input type="number" id="Eth_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Dol_rune_count"> Dol </label>
+                            <input type="number" id="Dol_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Hel_rune_count"> Hel </label>
+                            <input type="number" id="Hel_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Io_rune_count"> Io </label>
+                            <input type="number" id="Io_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Lum_rune_count"> Lum </label>
+                            <input type="number" id="Lum_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ko_rune_count"> Ko </label>
+                            <input type="number" id="Ko_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Fal_rune_count"> Fal </label>
+                            <input type="number" id="Fal_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Lem_rune_count"> Lem </label>
+                            <input type="number" id="Lem_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Pul_rune_count"> Pul </label>
+                            <input type="number" id="Pul_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Um_rune_count"> Um </label>
+                            <input type="number" id="Um_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Mal_rune_count"> Mal </label>
+                            <input type="number" id="Mal_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ist_rune_count"> Ist </label>
+                            <input type="number" id="Ist_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Gul_rune_count"> Gul </label>
+                            <input type="number" id="Gul_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Vex_rune_count"> Vex </label>
+                            <input type="number" id="Vex_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ohm_rune_count"> Ohm </label>
+                            <input type="number" id="Ohm_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Lo_rune_count"> Lo </label>
+                            <input type="number" id="Lo_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Sur_rune_count"> Sur </label>
+                            <input type="number" id="Sur_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Ber_rune_count"> Ber </label>
+                            <input type="number" id="Ber_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Jah_rune_count"> Jah </label>
+                            <input type="number" id="Jah_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Cham_rune_count"> Cham </label>
+                            <input type="number" id="Cham_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />                    
+                        </div>
+                    </div>
+                    <div class="rune-calc-holder" >
+                        <div class="custom-table">
+                            <label for="Zod_rune_count"> Zod </label>
+                            <input type="number" id="Zod_rune_count" style="width: 50px; height: 20px;" value="0" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"/>                    
+                        </div>
+                    </div>                    
+    
+    
+                </div>
+            </div>
+
+            <div class="body2-right" style="width: 45%; display: flex;"  >
+                <div class="calc-section">
+                    <button type="button" class="filter-btn" style="width: 100px; height: 40px;" onclick="calculate();">Calculate</button>
+                    <button type="button" class="filter-btn" style="width: 100px; height: 40px;" onclick="clearAllCalculatedRunes();">Clear All</button>
+                    <button type="button" class="filter-btn" style="width: 100px; height: 40px;" onclick="saveRunes();">Save All</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p class="heading">Footer goes here :)</p>
+        </div>
+    </div>
+
+
+    
+
+</body>
+
+
+<script>
+
+    var allRwds = [];
+    var completedRwd = [];
+    var nonCompletedRwd = [];
+    var savedRunes = [];
+    var savedCalcRunes = [];
+    var searchBar  = [];
+
+
+    function runeClick(rune) {
+        var attrib = rune.children[0].getAttribute('have');
+        var child = rune.children[0];
+        var item = rune;
+
+        if (attrib === "False") {
+            child.setAttribute("have", "True");
+            item.classList.add("rune-clicked");
+        }
+        if (attrib === "True") {
+            child.setAttribute("have", "False");
+            item.classList.remove("rune-clicked");
+        }
+
+        showRunes();
+        checkWholeRwd();
+        saveRunes();
+    }
+
+    //#region Population
+
+
+    class RuneWord {
+        constructor(titlee, name, runes, type, link, pic) {
+            this.titlee = titlee;
+            this.name = name;
+            this.runes = runes;
+            this.type = type;
+            this.link = link;
+            this.pic = pic
+        }
+        
+
+    }
+
+
+    function populateRwds() {
+
+        //#region Runewords
+        var Runewords = [
+            /* 1.09 */
+            { name: "Ancients Pledge", title: "Ancient's Pledge", runes: ['Ral', 'Ort', 'Tal', '', '', ''], ttype: "Shields/RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Ancient's_Pledge" },
+            { name: "Black", title: "Black", runes: ['Thul', 'Io', 'Nef', '', '', ''], ttype: "Clubs/Hammers/Maces/Melee&nbsp;Weapons/EDMG/Knockback" , llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Black" },
+            { name: "Fury", title: "Fury", runes: ['Jah', 'Gul', 'Eth', '', '', ''], ttype: "Melee&nbsp;Weapons", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Fury" },
+            { name: "Holy Thunder", title: "Holy Thunder", runes: ['Eth', 'Ral', 'Ort', 'Tal', '', ''], ttype: "Scepters/Melee&nbsp;Weapons", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Holy_Thunder" },
+            { name: "Honor", title: "Honor", runes: ['Amn', 'El', 'Ith', 'Tir', 'Sol', ''], ttype: "Melee Weapons/EDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Honor" },
+            { name: "Kings Grace", title: "King's Grace", runes: ['Amn', 'Ral', 'Thul', '', '', ''], ttype: "Swords/Scepters/Melee&nbsp;Weapons", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#King's_Grace" },
+            { name: "Leaf", title: "Leaf", runes: ['Tir', 'Ral', '', '', '', ''], ttype: "Staves/Melee&nbsp;Weapons<span class=\"small\">(Not Orbs/Wands)<span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Leaf" },
+            { name: "Lionheart", title: "Lionheart", runes: ['Hel', 'Lum', 'Fal', '', '', ''], ttype: "Body Armor/ATTRIB", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Lionheart" },
+            { name: "Lore", title: "Lore", runes: ['Ort', 'Sol', '', '', '', ''], ttype: "Helms" , llink: "https://projectdiablo2.miraheze.org/wiki/RWHelmets#Lore"},
+            { name: "Malice", title: "Malice", runes: ['Ith', 'El', 'Eth', '', '', ''], ttype: "Melee Weapons", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Malice" },
+            { name: "Melody", title: "Melody", runes: ['Shael', 'Ko', 'Nef', '', '', ''], ttype: "Missile Weapons/Knockback/EDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Melody" },
+            { name: "Memory", title: "Memory", runes: ['Lum', 'Io', 'Sol', 'Eth', '', ''], ttype: "Staves/Mana/ES<span class=\"small\">(Not Orbs)<span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Memory" },
+            { name: "Nadir", title: "Nadir", runes: ['Nef', 'Tir', '', '', '', ''], ttype: "Helms", llink: "https://projectdiablo2.miraheze.org/wiki/RWHelmets#Nadir" },
+            { name: "Radiance", title: "Radiance", runes: ['Nef', 'Sol', 'Ith', '', '', ''], ttype: "Helms/EDMG/EDEF", llink: "https://projectdiablo2.miraheze.org/wiki/RWHelmets#Radiance" },
+            { name: "Rhyme", title: "Rhyme", runes: ['Shael', 'Eth', '', '', '', ''], ttype: "Shields/RES/CBF", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Rhyme" },
+            { name: "Silence", title: "Silence", runes: ['Dol', 'Eld', 'Hel', 'Ist', 'Tir', 'Vex'], ttype: "Weapons/RES/EDMG/AURA", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Silence" },
+            { name: "Smoke", title: "Smoke", runes: ['Nef', 'Lum', '', '', '', ''], ttype: "Body Armor/RES/EDEF", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Smoke" },
+            { name: "Stealth", title: "Stealth", runes: ['Tal', 'Eth', '', '', '', ''], ttype: "Body Armor", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Stealth" },
+            { name: "Steel", title: "Steel", runes: ['Tir', 'El', '', '', '', ''], ttype: "Swords/Axes/Maces/Melee Weapons/OW", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Steel" },
+            { name: "Strength", title: "Strength", runes: ['Amn', 'Tir', '', '', '', ''], ttype: "Melee Weapons/EDMG/CB", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Strength" },
+            { name: "Venom", title: "Venom", runes: ['Tal', 'Dol', 'Mal', '', '', ''], ttype: "Melee Weapons/-RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Venom" },
+            { name: "Wealth", title: "Wealth", runes: ['Lem', 'Ko', 'Tir', '', '', ''], ttype: "Body Armor/MF/GF", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Wealth" },
+            { name: "White", title: "White", runes: ['Dol', 'Io', '', '', '', ''], ttype: "Wand/Melee<span class=\"small\">(Necro)<span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#White" },
+            { name: "Zephyr", title: "Zephyr", runes: ['Ort', 'Eth', '', '', '', ''], ttype: "Missile Weapons/EDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Zephyr" },
+            /* 1.10 */
+            { name: "Beast", title: "Beast", runes: ['Ber', 'Tir', 'Um', 'Mal', 'Lum', ''], ttype: "Axes/Scepters/Hammers/Melee&nbsp;Weapons/AURA/EDMG/CB/OW/IAS", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Beast" },
+            { name: "Bramble", title: "Bramble", runes: ['Ral', 'Ohm', 'Sur', 'Eth', '', ''], ttype: "Body Armor/PDMG/FHR/PRES", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Bramble" },
+            { name: "Breath of the Dying", title: "Breath of the Dying", runes: ['Vex', 'Hel', 'El', 'Eld', 'Zod', 'Eth'], ttype: "Melee&nbsp;Weapons/ED/IAS/DtoUD/ATTRIB", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Breath_of_the_Dying" },
+            { name: "Call To Arms", title: "Call To Arms", runes: ['Amn', 'Ral', 'Mal', 'Ist', 'Ohm', ''], ttype: "Melee&nbsp;Weapons/ED/BO/IAS", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Call_to_Arms" },
+            { name: "Chaos", title: "Chaos", runes: ['Fal', 'Ohm', 'Um', '', '', ''], ttype: "Claws/Melee&nbsp;Weapons/EDMG/WW/OW/CTC", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Chaos" },
+            { name: "Chains of Honor", title: "Chains of Honor", runes: ['Dol', 'Um', 'Ber', 'Ist', '', ''], ttype: "Body Armor/DtoD/EDEF/RES/DR", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Chains_of_Honor" },
+            { name: "Crescent Moon", title: "Crescent Moon", runes: ['Shael', 'Um', 'Tir', '', '', ''], ttype: "Axes/Swords/Polearms/Spears/Melee&nbsp;Weapons/CTC/EDMG/-LRES/OW", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Crescent_Moon" },
+            { name: "Delirium", title: "Delirium", runes: ['Lem', 'Ist', 'Io', '', '', ''], ttype: "Helms", llink: "https://projectdiablo2.miraheze.org/wiki/RWHelmets#Delirium" },
+            { name: "Doom", title: "Doom", runes: ['Hel', 'Ohm', 'Um', 'Lo', 'Cham', ''], ttype: "Axes/Polearms/Spears/Hammers/Melee&nbsp;Weapons/AURA", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Doom" },
+            { name: "Duress", title: "Duress", runes: ['Shael', 'Um', 'Thul', '', '', ''], ttype: "Body Armor/RES/CB/OW/EDMG/EDEF/FHR", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Duress" },
+            { name: "Enigma", title: "Enigma", runes: ['Jah', 'Ith', 'Ber', '', '', ''], ttype: "Body Armor/Teleport", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Enigma" },
+            { name: "Eternity", title: "Eternity", runes: ['Amn', 'Ber', 'Ist', 'Sol', 'Sur', ''], ttype: "Melee Weapons/EDMG/CB/CBF", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Eternity" },
+            { name: "Exile", title: "Exile", runes: ['Vex', 'Ohm', 'Ist', 'Dol', '', ''], ttype: "Paladin Shields (only)/CTC/FBR/EDEF/RES/Freeze", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Exile" },
+            { name: "Famine", title: "Famine", runes: ['Fal', 'Ohm', 'Ort', 'Jah', '', ''], ttype: "Axes/Hammers/Swords/Melee/IAS/EDMG/-RES/ELEMDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Famine" },
+            { name: "Gloom", title: "Gloom", runes: ['Fal', 'Um', 'Pul', '', '', ''], ttype: "Body Armor/CTC/FHR/EDEF/RES/MDR" , llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Gloom"},
+            { name: "Hand of Justice", title: "Hand of Justice", runes: ['Sur', 'Cham', 'Amn', 'Lo', '', ''], ttype: "Melee&nbsp;Weapons/Missile Weapons/CTC/AURA/IAS/EDMG/-RES/Freeze" , llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Hand_of_Justice"},
+            { name: "Heart of the Oak", title: "Heart of the Oak", runes: ['Ko', 'Vex', 'Pul', 'Thul', '', ''], ttype: "Staves*/Maces/Melee&nbsp;Weapons/RES/FCR/MANA", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Heart_of_the_Oak" },
+            { name: "Kingslayer", title: "Kingslayer", runes: ['Mal', 'Um', 'Gul', 'Fal', '', ''], ttype: "Swords/Axes/Melee&nbsp;Weapons/IAS/-DEF/CB/OW/EDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Kingslayer" },
+            { name: "Passion", title: "Passion", runes: ['Dol', 'Ort', 'Eld', 'Lem', '', ''], ttype: "Melee&nbsp;Weapons/Missile Weapons/IAS/EDMG/DtoUD/ZEAL", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Passion" },
+            { name: "Prudence", title: "Prudence", runes: ['Mal', 'Tir', '', '', '', ''], ttype: "Body Armor/FHR/EDEF/RES/DR/MDR/FCR", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Prudence" },
+            { name: "Sanctuary", title: "Sanctuary", runes: ['Ko', 'Ko', 'Mal', '', '', ''], ttype: "Shields/FHR/FBR/ICB/EDEF/CBF/RES/MDR", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Sanctuary" },
+            { name: "Splendor", title: "Splendor", runes: ['Eth', 'Lum', '', '', '', ''], ttype: "Shields/FCR/MANA", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Splendor"},
+            { name: "Stone", title: "Stone", runes: ['Shael', 'Um', 'Pul', 'Lum', '', ''], ttype: "Body Armor/EDEF/FHR/RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Stone" },
+            { name: "Wind", title: "Wind", runes: ['Sur', 'Sur', 'El', '', '', ''], ttype: "Melee Weapons/CTC/FRW/IAS/EDMG/-DEF", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Wind" },
+            /* 1.10 LADDER */
+            { name: "Brand", title: "Brand", runes: ['Jah', 'Lo', 'Mal', 'Gul', '', ''], ttype: "Missile Weapons/CTC/EDMG/-DEF/DtoD/Knockback", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Brand", ladder: true },
+            { name: "Death", title: "Death", runes: ['Hel', 'El', 'Vex', 'Ort', 'Gul', ''], ttype: "Swords/Axes/Melee&nbsp;Weapons/CTC/EDMG/CB/SKILL", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Death", ladder: true },
+            { name: "Destruction", title: "Destruction", runes: ['Vex', 'Lo', 'Ber', 'Jah', 'Ko', ''], ttype: "Polearms/Spears/Swords/Melee&nbsp;Weapons/CTC/EDMG/-DEF/CB/IAS", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Destruction" , ladder: true },
+            { name: "Dragon", title: "Dragon", runes: ['Sur', 'Lo', 'Sol', '', '', ''], ttype: "Body Armor/Shields/SKILL/CTC/AURA/RES/DEF/DR", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Dragon" , ladder: true },
+            { name: "Dream", title: "Dream", runes: ['Io', 'Jah', 'Pul', '', '', ''], ttype: "Helms/Shields/CTC/AURA/FHR/DEF/RES/LIFE", llink: "https://projectdiablo2.miraheze.org/wiki/RWHelmets#Dream" , ladder: true },
+            { name: "Edge", title: "Edge", runes: ['Tir', 'Tal', 'Amn', '', '', ''], ttype: "Missile Weapons/AURA/IAS/DtoD", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Edge" , ladder: true },
+            { name: "Faith", title: "Faith", runes: ['Ohm', 'Jah', 'Lem', 'Eld', '', ''], ttype: "Missile Weapons/AURA/EDMG/AR/DtoUD/RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Faith" , ladder: true },
+            { name: "Fortitude", title: "Fortitude", runes: ['El', 'Sol', 'Dol', 'Lo', '', ''], ttype: "Melee&nbsp;Weapons/Body Armor/FCR/EDMG/EDEF/LIFE/RES/DR", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Fortitude" , ladder: true },
+            { name: "Grief", title: "Grief", runes: ['Eth', 'Tir', 'Lo', 'Mal', 'Ral', ''], ttype: "Swords/Axes/Melee&nbsp;Weapons/CTC/DMG/IAS/-DEF/-PRES/DtoD", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Grief" , ladder: true },
+            { name: "Harmony", title: "Harmony", runes: ['Tir', 'Ith', 'Sol', 'Ko', '', ''], ttype: "Missile Weapons/AURA/EDMG/DtoD/EDMG", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Harmony" , ladder: true },
+            { name: "Ice", title: "Ice", runes: ['Amn', 'Shael', 'Jah', 'Lo', '', ''], ttype: "Missile Weapons/CTC/AURA/IAS/EDMG/-DEF/-CRES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Ice" , ladder: true },
+            { name: "Infinity", title: "Infinity", runes: ['Ber', 'Mal', 'Ber', 'Ist', '', ''], ttype: "Polearms/Spears/Melee&nbsp;Weapons/CTC/AURA/EDMG/-LRES/CB/-RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Infinity" , ladder: true },
+            { name: "Insight", title: "Insight", runes: ['Ral', 'Tir', 'Tal', 'Sol', '', ''], ttype: "Polearms/Spears/Staves/Melee&nbsp;Weapons/AURA/EDMG/FCR/AR/ATTRIB/MANA", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Insight" , ladder: true },
+            { name: "Last Wish", title: "Last Wish", runes: ['Jah', 'Mal', 'Jah', 'Sur', 'Jah', 'Ber'], ttype: "Swords/Hammers/Axes/Melee&nbsp;Weapons/CTC/AURA/EDMG/-DEF/CB",llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Last_Wish" , ladder: true },
+            { name: "Lawbringer", title: "Lawbringer", runes: ['Amn', 'Lem', 'Ko', '', '', ''], ttype: "Swords/Hammers/Scepter/Melee&nbsp;Weapons/CTC/AURA/-DEF/EDMG/DEF", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Lawbringer" , ladder: true },
+            { name: "Oath", title: "Oath", runes: ['Shael', 'Pul', 'Mal', 'Lum', '', ''], ttype: "Swords/Axes/Maces/Melee&nbsp;Weapons/CTC/IAS/EDMG/DtoD", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Oath" , ladder: true },
+            { name: "Obedience", title: "Obedience", runes: ['Hel', 'Ko', 'Thul', 'Eth', 'Fal', ''], ttype: "Polearms/Spears/Melee&nbsp;Weapons/CTC/FHR/EDMG/-DEF/-FRES/CB/DEF/RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Obedience" , ladder: true },
+            { name: "Phoenix", title: "Phoenix", runes: ['Vex', 'Vex', 'Lo', 'Jah', '', ''], ttype: "Melee&nbsp;Weapons/Shields/CTC/AURA/DEF/EDMG/-FRES/LIFE/RES", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Phoenix" , ladder: true },
+            { name: "Pride", title: "Pride", runes: ['Cham', 'Sur', 'Io', 'Lo', '', ''], ttype: "Polearms/Spears/Melee&nbsp;Weapons/CTC/AURA/AR/EDMG/Freeze", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Pride" , ladder: true },
+            { name: "Rift", title: "Rift", runes: ['Hel', 'Ko', 'Lem', 'Gul', '', ''], ttype: "Polearms/Spears/Scepters/Melee&nbsp;Weapons/CTC/AR/MDMG/ATTRIB", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Rift" , ladder: true },
+            { name: "Spirit", title: "Spirit", runes: ['Tal', 'Thul', 'Ort', 'Amn', '', ''], ttype: "Swords/Shields/Melee&nbsp;Weapons/FCR/FHR/RES/MANA", llink: "https://projectdiablo2.miraheze.org/wiki/RWShields#Spirit" , ladder: true },
+            { name: "Voice of Reason", title: "Voice of Reason", runes: ['Lem', 'Ko', 'El', 'Eld', '', ''], ttype: "Swords/Maces/Missile Weapons/Melee&nbsp;Weapons/CTC/AR/DtoD/DtoUD/CBF/-CRES", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Voice_of_Reason" , ladder: true },
+            { name: "Wrath", title: "Wrath", runes: ['Pul', 'Lum', 'Ber', 'Mal', '', ''], ttype: "Missile Weapons/CTC/IAS/DtoD/DtoUD/MDMG/CB/CBF", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Wrath" , ladder: true },
+            /* 1.11 */
+            { name: "Bone", title: "Bone", runes: ['Sol', 'Um', 'Um', '', '', ''], ttype: "Body Armor<span class=\"small\">(Necromancer)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Bone" , tclass: "Necromancer" },
+            { name: "Enlightenment", title: "Enlightenment", runes: ['Pul', 'Ral', 'Sol', '', '', ''], ttype: "Body Armor<span class=\"small\">(Sorceress)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Enlightenment" , tclass: "Sorceress" },
+            { name: "Myth", title: "Myth", runes: ['Hel', 'Amn', 'Nef', '', '', ''], ttype: "Body Armor<span class=\"small\">(Barbarian)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Myth" , tclass: "Barbarian" },
+            { name: "Peace", title: "Peace", runes: ['Shael', 'Thul', 'Amn', '', '', ''], ttype: "Body Armor<span class=\"small\">(Amazon)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Peace" , tclass: "Amazon" },
+            { name: "Principle", title: "Principle", runes: ['Ral', 'Pul', 'Eld', '', '', ''], ttype: "Body Armor<span class=\"small\">(Paladin)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Principle" , tclass: "Paladin" },
+            { name: "Rain", title: "Rain", runes: ['Ort', 'Mal', 'Ith', '', '', ''], ttype: "Body Armor<span class=\"small\">(Druid)</span>", llink: "https://projectdiablo2.miraheze.org/wiki/RWChests#Rain" , tclass: "Druid" },
+            { name: "Treachery", title: "Treachery", runes: ['Shael', 'Thul', 'Lem', '', '', ''], ttype: "Body Armor<span class=\"small\">(Assassin)</span>", llink: "Treachery" , tclass: "Assassin" },
+            /* PD2 */
+            { name: "Pattern", title: "Pattern", runes: ['Tal', 'Ort', 'Tir', '', '', ''], ttype: "Claws/Melee/EDMG/RES/", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Pattern" , tclass: "Assassin" },
+            { name: "Plague", title: "Plague", runes: ['Cham', 'Fal', 'Um', '', '', ''], ttype: "Weapons/Melee/CTC/AURA/DtoD/FCR/-PRES/OW/Freeze", llink: "https://projectdiablo2.miraheze.org/wiki/RWWeapons#Plague" }
+        ];
+        //#endregion
+
+
+        Runewords.forEach(function (rwrd) {
+            let Runeword = new RuneWord(rwrd.title, rwrd.name, rwrd.runes, rwrd.ttype, rwrd.llink , '');
+            allRwds.push(Runeword);
+        })
+
+        
+        populateTable(allRwds);
+    }
+
+    function populateTable(rwdsArr, sort) {
+        var html = '';
+        var runewords = rwdsArr.length;
+        var counter = 0;
+        var table = document.getElementById('preview_tbl');
+
+        while (counter < runewords) {
+            var row = table.insertRow(-1);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            var cell7 = row.insertCell(6);
+            var cell8 = row.insertCell(7);
+
+            row.id = rwdsArr[counter].name + '_row';
+            //row.innerHTML += 'onclick="function myFunc () { window.open(\'' + allRwds[counter].link + '\', \'_blank\')} myFunc();"';
+
+            //cell1.id = allRwds[counter].name;
+            cell2.id = rwdsArr[counter].name + '_rune_1';
+            cell3.id = rwdsArr[counter].name + '_rune_2';
+            cell4.id = rwdsArr[counter].name + '_rune_3';
+            cell5.id = rwdsArr[counter].name + '_rune_4';
+            cell6.id = rwdsArr[counter].name + '_rune_5';
+            cell7.id = rwdsArr[counter].name + '_rune_6';
+            cell8.id = rwdsArr[counter].name + '_description';
+            
+
+            row.title = rwdsArr[counter].link;
+            
+            cell1.innerHTML = rwdsArr[counter].titlee;
+            cell2.innerHTML = rwdsArr[counter].runes[0];
+            cell3.innerHTML = rwdsArr[counter].runes[1];
+            cell4.innerHTML = rwdsArr[counter].runes[2];
+            cell5.innerHTML = rwdsArr[counter].runes[3];
+            cell6.innerHTML = rwdsArr[counter].runes[4];
+            cell7.innerHTML = rwdsArr[counter].runes[5];
+            cell8.innerHTML = rwdsArr[counter].type;
+
+            row.classList.add('table_row');
+
+            cell1.classList.add('table_runewd_text');
+            cell8.classList.add('table_runewd_text');
+
+            if (sort === 'sort'){
+                row.classList.add('completed-rwrd');
+                cell1.style.color = 'green';
+                cell2.style.color = 'green';
+                cell3.style.color = 'green';
+                cell4.style.color = 'green';
+                cell5.style.color = 'green';
+                cell6.style.color = 'green';
+            }
+            row.addEventListener("click", function(a){
+                var split = a.path[1].id.split("_");
+                var currentRow = split[0];
+
+                allRwds.forEach(function(runeWd){
+                    if(runeWd.name === currentRow){
+                        saveRunes();
+                        window.open(runeWd.link, '_blank');
+                    }
+                })
+            });
+
+
+
+            //console.log(row.);
+            
+            /*
+            html += '<tr class="table_row" id="' + allRwds[counter].name + '_row" title = "' + allRwds[counter].link + '"  onclick="function myFunc () { window.open(\'' + allRwds[counter].link + '\', \'_blank\')} myFunc();"';
+            html += '><td class="table_runewd_text" >';
+            html += allRwds[counter].titlee;
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_1">';
+            html += allRwds[counter].runes[0];
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_2">';
+            html += allRwds[counter].runes[1];
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_3">';
+            html += allRwds[counter].runes[2];
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_4">';
+            html += allRwds[counter].runes[3];
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_5">';
+            html += allRwds[counter].runes[4];
+            html += '</td>';
+            html += '<td id="' + allRwds[counter].name + '_rune_6">';
+            html += allRwds[counter].runes[5];
+            html += '</td>';
+            html += '<td class="table_runewd_text" id="' + allRwds[counter].name + '_description">';
+            html += allRwds[counter].type;
+            html += '</td>';
+            html += '</tr>';
+
+            document.getElementById('preview_tbl').innerHTML += html;
+            */
+            counter++;
+            //html = '';
+        }
+    }
+    //#endregion 
+
+    //#region Show / Hide runes
+    function showRunes() {
+        var allRuneHolders = document.getElementsByClassName('rune-holder');
+        var length = allRuneHolders.length;
+        var counter = 0;
+
+
+        while (counter < length) {
+            var currItem = allRuneHolders[counter].children[0];
+
+            var attrib = currItem.getAttribute('have');
+
+            if (attrib === 'True') {
+                enableRunesInTable(currItem);
+            }
+            if (attrib === 'False') {
+
+                disableRunesInTable(currItem);
+            }
+            counter++;
+        }
+
+        sortByCompletion();
+    }
+
+    function enableRunesInTable(currItem) {
+        var currRune = currItem.innerText;
+        var runes_1 = document.querySelectorAll("[id*='_rune_1']");
+        turnOnOffRune(runes_1, currRune, 'Enable');
+        var runes_2 = document.querySelectorAll("[id*='_rune_2']");
+        turnOnOffRune(runes_2, currRune, 'Enable');
+        var runes_3 = document.querySelectorAll("[id*='_rune_3']");
+        turnOnOffRune(runes_3, currRune, 'Enable');
+        var runes_4 = document.querySelectorAll("[id*='_rune_4']");
+        turnOnOffRune(runes_4, currRune, 'Enable');
+        var runes_5 = document.querySelectorAll("[id*='_rune_5']");
+        turnOnOffRune(runes_5, currRune, 'Enable');
+        var runes_6 = document.querySelectorAll("[id*='_rune_6']");
+        turnOnOffRune(runes_6, currRune, 'Enable');
+    }
+
+    function disableRunesInTable(curritem) {
+        var currRune = curritem.innerText;
+        var runes_1 = document.querySelectorAll("[id*='_rune_1']");
+        turnOnOffRune(runes_1, currRune, 'Disable');
+        var runes_2 = document.querySelectorAll("[id*='_rune_2']");
+        turnOnOffRune(runes_2, currRune, 'Disable');
+        var runes_3 = document.querySelectorAll("[id*='_rune_3']");
+        turnOnOffRune(runes_3, currRune, 'Disable');
+        var runes_4 = document.querySelectorAll("[id*='_rune_4']");
+        turnOnOffRune(runes_4, currRune, 'Disable');
+        var runes_5 = document.querySelectorAll("[id*='_rune_5']");
+        turnOnOffRune(runes_5, currRune, 'Disable');
+        var runes_6 = document.querySelectorAll("[id*='_rune_6']");
+        turnOnOffRune(runes_6, currRune, 'Disable');
+
+    }
+
+    function turnOnOffRune(runesArr, currRune, status) {
+        var runesCounter = 0;
+
+        if (status === 'Enable') {
+            while (runesCounter < runesArr.length) {
+                if (runesArr[runesCounter].innerText === currRune) {
+                    runesArr[runesCounter].style.color = 'green';
+                    
+                }
+
+                
+                runesCounter++;
+            }
+        }
+
+        runesCounter = 0;
+
+        if (status === 'Disable') {
+            while (runesCounter < runesArr.length) {
+                if (runesArr[runesCounter].innerText === currRune) {
+                    runesArr[runesCounter].style.color = 'red';
+                }
+
+                runesCounter++;
+            }
+        }
+
+
+    }
+
+    function markRwdAlmostDone() {
+        allRwds.forEach(function (rwd) {
+            var checkRow = document.getElementById(rwd.name + '_row');
+            var children = checkRow.children;
+            var runesRequired = [];
+            var runesYouHave = 0;
+
+
+            if(children[1].innerText.length > 0){
+                runesRequired.push(children[1]);
+            }
+            if(children[2].innerText.length > 0){
+                runesRequired.push(children[2]);
+            }
+            if(children[3].innerText.length > 0){
+                runesRequired.push(children[3]);
+            }
+            if(children[4].innerText.length > 0){
+                runesRequired.push(children[4]);
+            }
+            if(children[5].innerText.length > 0){
+                runesRequired.push(children[5]);
+            }
+            if(children[6].innerText.length > 0){
+                runesRequired.push(children[6]);
+            }
+
+            var neededRunesCount = runesRequired.length;
+
+
+            runesRequired.forEach(function(r){
+                if(r.style.color === 'green')
+                {
+                    runesYouHave ++;
+                }
+            });
+
+            if((runesYouHave < neededRunesCount)&&(runesYouHave > 0)){
+                    checkRow.classList.add('almost-completed');
+            }
+            if(runesYouHave == 0){
+                
+                if(checkRow.classList.contains('almost-completed'))
+                {
+                    checkRow.classList.remove('almost-completed');
+                }
+            }
+            
+            
+        });
+    }
+    //#endregion
+
+    //#region Check if whole runeword
+
+    function checkWholeRwd() {
+        var allTableRows = [];
+        var allRuneWords = [];
+        var requiredRunes = [];
+
+        var counter = 0;
+
+        // get all table rows
+        while (counter < allRwds.length) {
+
+            allTableRows.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_row']"));
+            counter++;
+        }
+        counter = 0;
+
+        // get all runewords runes
+        while (counter < allRwds.length) {
+            var tmpArr = [];
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_1']"));
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_2']"));
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_3']"));
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_4']"));
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_5']"));
+            tmpArr.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_rune_6']"));
+            allRuneWords.push(tmpArr);
+            counter++;
+        }
+        counter = 0;
+
+        // get all required runes for all runewords
+        while (counter < allRuneWords.length) {
+
+            var tmpArr = [];
+
+            if (allRuneWords[counter][0][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][0][0]);
+            }
+            if (allRuneWords[counter][1][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][1][0]);
+            }
+            if (allRuneWords[counter][2][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][2][0]);
+            }
+            if (allRuneWords[counter][3][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][3][0]);
+            }
+            if (allRuneWords[counter][4][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][4][0]);
+            }
+            if (allRuneWords[counter][5][0].innerText.length > 0) {
+                tmpArr.push(allRuneWords[counter][5][0]);
+            }
+
+            requiredRunes.push(tmpArr);
+            counter++;
+        }
+        counter = 0;
+
+        // check if you have all runes for the runeword
+        requiredRunes.forEach(function (runeArr) {
+            var validateRunes = runeArr.length;
+            var validationString = '';
+
+            // check if all runes are green
+            while (counter < validateRunes) {
+                if (runeArr[counter].style.color === 'green') {
+                    validationString += '1';
+                }
+                counter++;
+            }
+
+            counter = 0;
+
+            // color the rows
+            if (validationString.length == validateRunes) {
+
+                while (counter < allTableRows.length) {
+                    var split1 = runeArr[0].id.split('_');
+                    var currRuneWord = split1[0];
+                    var currItem = allTableRows[counter][0];
+                    var currItemId = currItem.id;
+                    var split2 = currItemId.split("_");
+                    var itemToMatch = split2[0];
+
+                    if (currRuneWord === itemToMatch) {
+                        // currItem.style.backgroundColor = 'rgb(28, 59, 48)';
+                        if(currItem.classList.contains('almost-completed')){
+                            currItem.classList.remove('almost-completed');
+                        }
+                        currItem.classList.add('completed-rwrd');
+
+                        //currItem.insertBefore(currItem.parent().find('tr:first-child'));
+                    }
+                    counter++;
+                }
+            }
+            else {
+
+                while (counter < allTableRows.length) {
+                    var split1 = runeArr[0].id.split('_');
+                    var currRuneWord = split1[0];
+                    var split2 = allTableRows[counter][0].id.split("_");
+                    var currentRow = split2[0];
+
+                    if (currRuneWord === currentRow) {
+                        // allTableRows[counter][0].style.backgroundColor = 'rgb(53, 51, 51)';
+                        allTableRows[counter][0].classList.remove('completed-rwrd');
+                    }
+
+                    counter++;
+                }
+            }
+
+            counter = 0;
+
+        })
+
+        sortingTable();
+    }
+
+    //#endregion
+
+    //#region Sorting Table
+    
+
+    function sortingTable() {
+        var counter = 0;
+
+        completedRwd = [];
+        nonCompletedRwd = [];
+
+        // get all table rows
+        while (counter < allRwds.length) {
+
+            var currentRow = document.querySelectorAll("[id*='" + allRwds[counter].name + "_row']");
+
+            if (currentRow[0].classList.contains('completed-rwrd')) {
+                var splitt = currentRow[0].id.split('_');
+
+                allRwds.forEach(function (rrune) {
+                    if (rrune.name === splitt[0]) {
+                        completedRwd.push(rrune);
+                    }
+                });
+
+            } else {
+
+                var splitt = currentRow[0].id.split('_');
+                allRwds.forEach(function (rrune) {
+
+                    if (rrune.name === splitt[0]) {
+                        nonCompletedRwd.push(rrune);
+                    }
+                });
+            }
+            counter++;
+        }
+        counter = 0;
+
+        // console.log(completedRwd);
+        // console.log(nonCompletedRwd[0]);
+        sortByCompletion();
+    }
+
+    function sortByCompletion() {
+        var table = document.getElementById('preview_tbl');
+        var allRows = table.rows;
+        var parent = allRows[0].parentNode
+        var completed = document.getElementsByClassName("completed-rwrd");
+        var almostCompleted = document.getElementsByClassName('almost-completed');
+
+        // sort table
+
+        if(almostCompleted.length > 0 ){
+            while(counter < almostCompleted.length){
+                parent.insertBefore(almostCompleted[counter], allRows[1]);
+                counter++;
+            }
+        }
+        
+
+        counter = 0;
+        
+        if(completed.length > 0){
+            while(counter<completed.length){
+                parent.insertBefore(completed[counter],allRows[1]);
+                counter++
+            }
+        }
+
+        counter = 0;
+
+        markRwdAlmostDone();
+       
+    }
+
+    //#endregion
+    
+    //#region Clear All
+
+    function clearAll() {
+        var rh = document.getElementsByClassName('rune-holder');
+        var rhArr = Array.from(rh);
+        var allTableRows = [];
+        var counter = 0;
+
+
+        rhArr.forEach(function (holder) {
+            if(holder.classList.contains('rune-clicked')){
+                holder.classList.remove('rune-clicked');
+                holder.children[0].setAttribute('have', 'False');
+            }
+        });
+
+        
+
+        // get all table rows
+        while (counter < allRwds.length) {
+
+            allTableRows.push(document.querySelectorAll("[id*='" + allRwds[counter].name + "_row']"));
+            counter++;
+        }
+        counter = 0;
+
+        allTableRows.forEach(function (row) {
+            if(row[0].classList.contains('completed-rwrd')){
+                row[0].classList.remove('completed-rwrd');
+            }
+            if(row[0].classList.contains('almost-completed')){
+                row[0].classList.remove('almost-completed');
+            }
+        });
+
+        showRunes();
+        filterTable('reset');
+        saveRunes();
+    }
+
+    //#endregion
+
+    //#region Filter buttons
+
+    function filterBtn(button, word){
+        button.classList.toggle('filter-btn-clicked');
+        if (button.classList.contains('filter-btn-clicked')){
+            searchBar.push(word.toLowerCase());
+        } 
+        if (!button.classList.contains('filter-btn-clicked')){
+            // searchbar == all elements from searchbar which are not equal to the filter word (rem word from array)
+            searchBar = searchBar.filter(e => e != word.toLowerCase());
+        }
+        filterTable();
+        
+    }
+    
+    //#endregion
+
+    //#region Filtering
+    function filterTable() {
+        //filter = filter.toLowerCase();
+        var rows = document.getElementById('preview_tbl').children[0].children;
+
+        // check if descr column contains each of filter words in the searchbar array
+        var counter = 1;
+            // 1 because we skip headers
+        while (counter < rows.length){
+            var innerText = rows[counter].children[7].innerText.toLowerCase();
+
+            // check if description contains all filter words
+            var checkFilter = searchBar.every(function (elem) {
+                return innerText.toLowerCase().indexOf(elem.toLowerCase()) != -1;
+            })
+
+            if(checkFilter){
+                rows[counter].style.display = '';
+            }
+            if(!checkFilter){
+                rows[counter].style.display = 'none';
+            }
+            // if(word==='reset'){
+            //     rows[counter].style.display = '';
+            // }            
+            if (searchBar.length == 0){
+                rows[counter].style.display = '';
+            }
+            
+            counter++;
+        }
+       
+        coutner = 1;
+        
+
+        saveRunes();
+    }
+    //#endregion
+    
+    //#region Save/Load last runes
+    function saveRunes() {
+        var allRunes = document.getElementsByClassName('rune-holder');
+        var counter = 0;
+
+        // clear saved runes
+        savedRunes = [];
+
+        while( counter < allRunes.length){
+            if(allRunes[counter].classList.contains('rune-clicked')){
+                savedRunes.push(allRunes[counter].children[0].innerText);
+            }
+            counter++;
+        }
+
+        counter = 0;
+        localStorage.setItem("savedRunes", savedRunes);
+        
+        saveCalculated();
+        
+    }
+
+    function saveCalculated(){
+        // save all calculate runes
+        var allCalcRunes = getAllRunesYouHave();
+        var counter2 = 0;
+
+        while(counter2 < allCalcRunes.length){
+            savedCalcRunes.push(allCalcRunes[counter2].value);
+            counter2++;
+        }
+
+        localStorage.setItem("savedCalculateRunes", savedCalcRunes);
+    }
+
+    function reloadRunes() {
+        var allRunes = document.getElementsByClassName('rune-holder');
+        // load saved runes from local storage
+        var getSaved = localStorage.getItem("savedRunes");
+        var splitSaved = getSaved.split(',');
+        var counter = 0;
+
+        
+        while( counter < allRunes.length){
+            if(splitSaved.includes(allRunes[counter].children[0].innerText)){
+                allRunes[counter].classList.add('rune-clicked');
+                allRunes[counter].children[0].setAttribute('have' , 'True');
+            }
+            counter++;
+        }
+
+        showRunes();
+        checkWholeRwd();
+        reloadCalculated();
+    }
+
+    function reloadCalculated(){
+        var getAllCalc = getAllRunesYouHave();
+        var getSaved = localStorage.getItem("savedCalculateRunes");
+        var splitSaved = getSaved.split(',');
+        var counter = 0;
+
+        while (counter < getAllCalc.length){
+
+            getAllCalc[counter].value = splitSaved[counter];
+            counter++;
+        }
+    }
+    //#endregion
+
+    //#region   navigation panel
+
+    function homeBtn(){
+        document.getElementById('body_content1').style.display = 'flex';
+        document.getElementById('body_content2').style.display = 'none';
+    }
+
+    function calcRunesBtn(){
+        document.getElementById('body_content1').style.display = 'none';
+        document.getElementById('body_content2').style.display = 'flex';
+
+        // set all counters to 0 ??? questionable
+        //clearAllCalculatedRunes();
+    }
+    //#endregion
+
+    //#region  rune calculation
+    function calculate() {
+        var allRunesAvailable = getAllRunesYouHave();
+        var counter = 0;
+
+        while ( counter < allRunesAvailable.length){
+        var currentValue = allRunesAvailable[counter].value;
+        
+        if (currentValue >= 3 && counter <= 19){
+            // combine 3 runes to the higher one 
+                // rem 3 from the lower one
+                var tmpHowMuchToAdd = currentValue / 3;
+                tmpHowMuchToAdd = Math.floor(tmpHowMuchToAdd);
+                currentValue = currentValue - 3 * tmpHowMuchToAdd;
+
+
+                
+                allRunesAvailable[counter].value = currentValue;
+                // add +1 to the higher one
+                var nextValue = allRunesAvailable[counter + 1].value;
+                var nextNew  = parseInt(nextValue) + parseInt(tmpHowMuchToAdd);
+                allRunesAvailable[counter + 1].value = nextNew;
+            } else if (currentValue >= 2 && counter > 19) {
+                // combine 3 runes to the higher one 
+                    // rem 3 from the lower one
+                    var tmpHowMuchToAdd = currentValue / 2;
+                    tmpHowMuchToAdd = Math.floor(tmpHowMuchToAdd);
+                    currentValue = currentValue - 2 * tmpHowMuchToAdd;
+
+
+                    
+                    allRunesAvailable[counter].value = currentValue;
+                    // add +1 to the higher one
+                    var nextValue = allRunesAvailable[counter + 1].value;
+                    var nextNew  = parseInt(nextValue) + parseInt(tmpHowMuchToAdd);
+                    allRunesAvailable[counter + 1].value = nextNew;
+            }
+        counter ++ ;
+        }
+        counter = 0;
+    }
+
+    function getAllRunesYouHave(){
+        var allRuneCounters = [];
+        var tmp = document.getElementsByClassName('custom-table')
+        var counter = 0;
+        while(counter < tmp.length){
+            allRuneCounters.push(tmp[counter].children[1]);
+            counter++;
+        }
+
+        counter = 0;
+
+        return allRuneCounters;
+    }
+
+    function clearAllCalculatedRunes(){
+        var allRunesAvailable = getAllRunesYouHave();
+        var counter = 0;
+
+        while (counter < allRunesAvailable.length){
+
+            allRunesAvailable[counter].value = 0;
+
+            counter++;
+        }
+
+    }
+    //#endregion
+
+    //#region SearchBar
+
+    function nameSearchBarCheck(input) {
+        filterTable();
+        
+        // var test = window.prompt;
+        var rows = document.getElementById('preview_tbl').children[0].children;
+
+        var counter = 1;
+            // 1 because we skip headers
+        while (counter < rows.length){
+            var innerText = rows[counter].children[0].innerText.toLowerCase();
+            var descriptionInnerText = rows[counter].children[0].innerText.toLowerCase();
+            // check if description contains all filter words
+            var checkFilter = searchBar.every(function (elem) {
+                return descriptionInnerText.toLowerCase().indexOf(elem.toLowerCase()) != -1;
+            })
+
+
+            if(innerText.includes(input) && checkFilter){
+                rows[counter].style.display = '';
+            }
+            if(!innerText.includes(input)){
+                rows[counter].style.display = 'none';
+            }
+            // if(word==='reset'){
+            //     rows[counter].style.display = '';
+            // }            
+            if (searchBar.length == 0){
+                rows[counter].style.display = '';
+            }
+            
+            counter++;
+        }
+       
+        coutner = 1;
+
+        
+    }
+
+    //#endregion   
+
+    // on document ready (jQuery equiv)
+    (function() {
+        populateRwds();
+        reloadRunes();
+        sortByCompletion();
+    })();
+    // window.onload = populateRwds(), reloadRunes();
+
+</script>
+
+</html>
