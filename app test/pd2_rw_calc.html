@@ -1078,8 +1078,7 @@
             // searchbar == all elements from searchbar which are not equal to the filter word (rem word from array)
             searchBar = searchBar.filter(e => e != word.toLowerCase());
         }
-        filterTable();
-        
+        nameSearchBarCheck(document.getElementById('search_bar').value);
     }
     
     //#endregion
@@ -1283,34 +1282,28 @@
 
     function nameSearchBarCheck(input) {
         filterTable();
-        
-        // var test = window.prompt;
         var rows = document.getElementById('preview_tbl').children[0].children;
 
         var counter = 1;
             // 1 because we skip headers
         while (counter < rows.length){
-            var innerText = rows[counter].children[0].innerText.toLowerCase();
-            var descriptionInnerText = rows[counter].children[0].innerText.toLowerCase();
-            // check if description contains all filter words
+            // var innerText = rows[counter].children[0].innerText.toLowerCase();
+            var rwNameInnerText = rows[counter].children[0].innerText.toLowerCase();
+            // check if description contains filter words (from the toggle buttons)
             var checkFilter = searchBar.every(function (elem) {
-                return descriptionInnerText.toLowerCase().indexOf(elem.toLowerCase()) != -1;
+                return rwNameInnerText.toLowerCase().indexOf(elem.toLowerCase()) != -1;
             })
 
-
-            if(innerText.includes(input) && checkFilter){
+            if(rwNameInnerText.includes(input) && checkFilter){
                 rows[counter].style.display = '';
             }
-            if(!innerText.includes(input)){
+            if(!rwNameInnerText.includes(input)){
                 rows[counter].style.display = 'none';
             }
-            // if(word==='reset'){
+
+            // if (searchBar.length == 0){
             //     rows[counter].style.display = '';
-            // }            
-            if (searchBar.length == 0){
-                rows[counter].style.display = '';
-            }
-            
+            // }
             counter++;
         }
        
