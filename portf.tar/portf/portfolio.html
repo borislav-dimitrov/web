@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/about-arrow.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav-dropdown.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <link rel="stylesheet" type="text/css" href="./css/experience.css">
+    <link rel="stylesheet" type="text/css" href="./css/skillset.css">
+    <link rel="stylesheet" type="text/css" href="./css/projects.css">
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/onload.js"></script>
+    <script src="./js/eventListeners.js"></script>
+
+</head>
+
+<body>
+
+    <div class="navigation" id="myHeader">
+        <div class="nav-node nav-grid-1">
+            <div class="n-wrapper"></div>
+        </div>
+
+        <div class="nav-node nav-grid-2">
+            <div class="my-title">
+                <h1>Borislav Dimitrov</h1>
+            </div>
+        </div>
+
+        <div class="nav-node nav-grid-3">
+            <div class="nav-btn" id="nav-drpdwn-btn">
+                <img src="./images/menu.png" alt="menu" width="48px" height="48px" id="nav-drpdwn-ico">                
+            </div>
+
+            <div class="nav-dropdown-menu hide" id="nav-menu">
+                <ul>
+                    <li>Experience</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-bg-image"></div>
+    <div class="about-wrapper">
+        <div class="frame">
+            <h1>Hello! I'm Borislav.</h1>
+            <h1>I am system administrator and developer.</h1>
+            <p>I'm passionate about learning and growing professionally.</p>
+        </div>
+
+        <div class="about-wrapper-arrow" id="wrapper-arrow" onclick="myScrollTo('experience')">
+            <!-- <i class="fas fa-angle-double-down" id="mover_chevron"></i> -->
+            <i class="fas fa-chevron-down" id="chevron"></i>
+        </div>
+    </div>
+
+    <div class="section experience" id="experience">
+        <h2 class="my_header">My experience</h2>
+        <div class="experience-grid">
+            <p class="experience-grid-item-1 my_text" id="experience-text">System administrator with 4+ years of experience in system maintenance and server infrastructure operations management.
+                 I have participated in programming internal projects for big international company, and mainly writing scripts to help out my work as system administrator.</p>
+
+            <img class="experience-grid-item-2" src="./images/me.png" alt="me" id="experience-img" >
+        </div>
+    </div>
+
+    <div class="section skillset">
+        <h2 class="my_header">My current skillset</h2>
+        <div class="skillset-grid">
+            <div class="sysadmin-skills skillset-grid-item-1">
+                <ul>
+                    <li>Windows Administration &nbsp;&nbsp;&nbsp;<span><img src="./images/windows.png" alt="Windows" title="Windows Administration" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Powershell/Bash scripting &nbsp;&nbsp;&nbsp;<span><img src="./images/pwshell.png" alt="powershell" title="PowerShell" height="35px" width="35px" style="vertical-align: middle;"></span>&nbsp;<span><img src="./images/bash.png" alt="bash" title="Bash" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Active Directory &nbsp;&nbsp;&nbsp;<span><img src="./images/adir.png" alt="active directory" title="Active Directory" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Networking &nbsp;&nbsp;&nbsp;<span><img src="./images/networking.png" alt="networking" title="Networking" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Linux Administration &nbsp;&nbsp;&nbsp;<span><img src="./images/linux.png" alt="linux administration" title="Linux Administration" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Microsoft Azure AD Users Management &nbsp;&nbsp;&nbsp;<span><img src="./images/azure.png" alt="Azure" title="Azure AD" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                </ul>
+            </div>
+            <div class="dev-skills skillset-grid-item-2">
+                <ul>
+                    <li>.Net / C# &nbsp;&nbsp;&nbsp;<span><img src="./images/cshrp.png" alt="C#" title="C#" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>JavaScript &nbsp;&nbsp;&nbsp;<span><img src="./images/js.png" alt="js" title="JavaScript" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>HTML &nbsp;&nbsp;&nbsp;<span><img src="./images/html5.png" alt="html5" title="Html5" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>CSS &nbsp;&nbsp;&nbsp;<span><img src="./images/css.png" alt="css" title="CSS" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>SQL Oracle &nbsp;&nbsp;&nbsp;<span><img src="./images/oraclesql.png" alt="oracle sql" title="Oracle SQL" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>PL/SQL &nbsp;&nbsp;&nbsp;<span><img src="./images/plsql.png" alt="plsql" title="PL / SQL" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Apex Oracle &nbsp;&nbsp;&nbsp;<span><img src="./images/apex.png" alt="apex oracle" title="Apex Oracle" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                    <li>Python &nbsp;&nbsp;&nbsp;<span><img src="./images/python.png" alt="python" title="Python" height="35px" width="35px" style="vertical-align: middle;"></span></li>
+                </ul>
+            </div>
+            <button type="button" class="resume-btn skillset-grid-item-3" onclick="downloadCv()">DOWNLOAD RESUME</button>
+
+        </div>
+    </div>
+
+    <div class="section projects">
+        <h2 class="my_header">My projects</h2>
+        <div class="projects-grid">
+            <div class="projects-grid-item-1_1" id="project-1">
+                <h3>Printer/Cartridge Monitoring Software</h3>
+                <p class="my_text">The latest project that I participated in as programmer was about a system that tracks the transactions for toner cartridges,
+                     printer taxes, counters for rented printers and can give different reports and statistics about them. </p>
+                     <div class="icons">
+                        <img src="./images/apex.png" alt="apex oracle" title="Apex Oracle" width="48" height="48" >
+                         <img src="./images/html5.png" alt="html5" title="HTML5">
+                         <img src="./images/css.png" alt="css" title="CSS">
+                         <img src="./images/js.png" alt="js" title="JavaScript">
+                         <img src="./images/oraclesql.png" alt="oracle sql" title="Oracle Sql">
+                         <img src="./images/plsql.png" alt="plsql" title="PL / SQL">
+                     </div>
+            </div>
+            <div class="projects-grid-item-1_2">
+                <img src="./images/monitoring.jpg" alt="monitoring software" id="project-1-icon" style="max-width: 100%;border-radius: 15px;margin-right: 1rem;">
+            </div>
+
+            <div class="projects-grid-item-2_1" id="project-2">
+                <h3>Automation Tools</h3>
+                <p class="my_text">Various script tools that install,update or backup different softwares automatically.</p>
+                <div class="icons">
+                    <img src="./images/cmd.png" alt="cmd" title="CMD">
+                     <img src="./images/pwshell.png" alt="powershell" title="PowerShell">
+                     <img src="./images/bash.png" alt="bash" title="Bash">
+                     <img src="./images/cshrp.png" alt="C#" title="C#">
+                 </div>
+            </div>
+            <div class="projects-grid-item-2_2">
+                <img src="./images/automation.jpg" alt="automation software" id="project-2-icon" style="max-width: 100%;border-radius: 15px;margin-left: 1rem;">
+            </div>
+        </div>
+    </div>
+
+    <div class="section contact-me">
+        <h2 class="my_header">Get in touch</h2>
+        <div class="contact-me_info">
+            <p>Bulgaria, Ruse</p>
+            <p>+359 88 975 0313</p>
+            <p>bojoyyy@gmail.com</p>
+        </div>
+        <div class="contact-me-grid">
+            <input class="contact-me-grid-item-1" type="text" id="name" placeholder="Name">
+            <input class="contact-me-grid-item-2" type="text" id="email" placeholder="E-mail">
+            <textarea class="contact-me-grid-item-3" type="text" id="message" placeholder="Your message.." style="resize: none;" ></textarea>
+            <button type="button" class="contact-me-grid-item-4" id="contact-me_submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="footer footer-grid">
+        <div class="footer-node-1"></div>
+        <div class="footer-node-2">
+            <h4>About</h4>
+            <p>Borislav Dimitrov</p>
+            <p>bojoyyy@gmail.com</p>
+        </div>
+        <div class="footer-node-3"></div>
+        <div class="footer-node-4">
+            <p>Copyright © 2021 Borislav Dimitrov. All rights reserved.</p>
+        </div>
+        <div class="footer-node-5" onclick="scrollToTop()">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+        </div>
+    </div>
+
+</body>
+
+</html>

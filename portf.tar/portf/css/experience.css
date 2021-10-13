@@ -1,0 +1,37 @@
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+.experience-grid-item-1 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.experience-grid-item-2 {
+  grid-column: 2;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+}
+
+/* .experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* #experience-text::before {
+    content: 'My Experience';
+    font-size: 35px;
+    line-height: 5rem;
+    color: var(--color-headers);
+    font-weight: bold;
+} */
+
+#experience-img {
+  max-height: 15rem;
+}
