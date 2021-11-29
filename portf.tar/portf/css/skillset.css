@@ -1,7 +1,7 @@
 .skillset-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-rows: 2fr, 1fr;
+  /* grid-template-rows: 2fr 1fr; */
 }
 
 .skillset-grid-item-1 {
@@ -45,6 +45,7 @@
 
 .resume-btn:hover {
   cursor: pointer;
+  animation: none;
 
   background-color: var(--color-headers);
 

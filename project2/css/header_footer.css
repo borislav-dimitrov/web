@@ -1,0 +1,83 @@
+.header_holder {
+  background-color: red;
+  min-height: 3em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  float: left;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  min-height: 3em;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer_holder {
+  background-color: yellow;
+  min-height: 3em;
+  text-align: center;
+}
+
+.dropbtn {
+  background-color: red;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 1em;
+  background-color: white;
+  min-width: 10em;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: orange;
+  cursor: pointer;
+  border-radius: 5px;
+}

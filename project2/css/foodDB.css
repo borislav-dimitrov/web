@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main_holder {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: gray;
+  flex: 1;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+.food_library {
+  float: left;
+  width: 15%;
+  padding: 0.5em;
+  background-color: teal;
+  overflow: auto;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.food_info {
+  float: right;
+  width: 75%;
+  padding: 0.5em;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+ul,
+#foodLibTreeView {
+  list-style-type: none;
+  padding-inline-start: 0.5em;
+}
+
+#foodLibTreeView {
+  margin: 0;
+  padding: 0;
+}
+
+#foodLibTreeView a {
+  color: black;
+  text-decoration: none;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}

@@ -1,0 +1,45 @@
+            <div class="calculate-intake-calories">
+                <p title="Basal metabolic rate (BMR) is often used interchangeably with resting metabolic rate (RMR). While BMR is a minimum number of calories required for basic functions at rest.">calculate BMR</p>
+                
+                <div class="inputinfo">
+                    <div class="labels">
+                        <label for="weight">Weight:</label>
+                        <label for="Height">Height:</label>
+                        <label for="Age">Age:</label>
+                        <label for="Sex">Sex:</label>
+                    </div>
+    
+                    <div class="forms">
+                        <input type="text" name="Weight" id="Weight"><br>
+                        <input type="text" name="Height" id="Height"><br>
+                        <input type="text" name="Age" id="Age"><br>
+                        <select name="Sex" id="Sex" style="min-width: 100%;">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <button>calculate</button>
+            </div>
+
+
+
+csss
+
+
+
+.calculate-intake-calories {
+  float: right;
+  width: 40%;
+  padding: 0.5em;
+
+  background-color: lightblue;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+}

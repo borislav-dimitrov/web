@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
+    <title>Borislav Dimitrov</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="./css/projects.css">
     <link rel="stylesheet" type="text/css" href="./css/contact.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/1366x768-media.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile-360x800-media.css">
+    <link rel="stylesheet" type="text/css" href="./css/tablet-768x1024-media.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
@@ -49,10 +52,10 @@
 
             <div class="nav-dropdown-menu hide" id="nav-menu">
                 <ul>
-                    <li>Experience</li>
-                    <li>Skills</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li onclick="myScrollTo('experience')">Experience</li>
+                    <li onclick="myScrollTo('skills')">Skills</li>
+                    <li onclick="myScrollTo('projects')">Projects</li>
+                    <li onclick="myScrollTo('contact-me')">Contact Me</li>
                 </ul>
             </div>
         </div>
@@ -78,11 +81,11 @@
             <p class="experience-grid-item-1 my_text" id="experience-text">System administrator with 4+ years of experience in system maintenance and server infrastructure operations management.
                  I have participated in programming internal projects for big international company, and mainly writing scripts to help out my work as system administrator.</p>
 
-            <img class="experience-grid-item-2" src="./images/me.png" alt="me" id="experience-img" >
+            <img class="experience-grid-item-2" src="./images/Logo-1.png" alt="me" id="experience-img" >
         </div>
     </div>
 
-    <div class="section skillset">
+    <div class="section skillset" id="skills">
         <h2 class="my_header">My current skillset</h2>
         <div class="skillset-grid">
             <div class="sysadmin-skills skillset-grid-item-1">
@@ -112,7 +115,7 @@
         </div>
     </div>
 
-    <div class="section projects">
+    <div class="section projects" id="projects">
         <h2 class="my_header">My projects</h2>
         <div class="projects-grid">
             <div class="projects-grid-item-1_1" id="project-1">
@@ -140,6 +143,7 @@
                      <img src="./images/pwshell.png" alt="powershell" title="PowerShell">
                      <img src="./images/bash.png" alt="bash" title="Bash">
                      <img src="./images/cshrp.png" alt="C#" title="C#">
+                     <img src="./images/python.png" alt="Python" title="Python">
                  </div>
             </div>
             <div class="projects-grid-item-2_2">
@@ -148,12 +152,12 @@
         </div>
     </div>
 
-    <div class="section contact-me">
+    <div class="section contact-me" id="contact-me">
         <h2 class="my_header">Get in touch</h2>
         <div class="contact-me_info">
             <p>Bulgaria, Ruse</p>
             <p>+359 88 975 0313</p>
-            <p>bojoyyy@gmail.com</p>
+            <p>borislav-dimitrov@outlook.com</p>
         </div>
         <div class="contact-me-grid">
             <input class="contact-me-grid-item-1" type="text" id="name" placeholder="Name">
@@ -168,7 +172,7 @@
         <div class="footer-node-2">
             <h4>About</h4>
             <p>Borislav Dimitrov</p>
-            <p>bojoyyy@gmail.com</p>
+            <p>borislav-dimitrov@outlook.com</p>
         </div>
         <div class="footer-node-3"></div>
         <div class="footer-node-4">
