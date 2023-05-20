@@ -1,0 +1,12 @@
+1. Engines:
+    a. Phaser
+    b. MelonJS
+    c. PixiJS (fast canvas 2D renderer)
+
+2. Important GameDev Design Patterns:
+    a. Singleton Pattern
+    b. Observer Pattern
+    c. Command Pattern
+    d. Component Pattern
+    e. Flyweight Pattern
+    f. State Pattern
