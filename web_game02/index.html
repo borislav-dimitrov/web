@@ -5,28 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Orcs vs Humans Login</title>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <form class="login-form">
-        <div class="login">
-            <div class="login-section">
-                <label for="username">Username</label>
-                <input id="username" type="text" placeholder="Username">
-            </div>
-            <div class="login-section">
-                <label for="password">Password</label>
-                <input id="password" type="text" placeholder="Password">
-            </div>
-            <div class="login-controls">
-                <button type="button" onclick="login()">Login</button>
-                <button type="button">Register</button>
-            </div>
+    <div class="container">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
         </div>
-    </form>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="btn-container">
+            <button class="login-btn" type="button" onclick="login()">Login</button>
+            <button class="register-btn" type="button">Register</button>
+        </div>
+    </div>
 </body>
 
 </html>
