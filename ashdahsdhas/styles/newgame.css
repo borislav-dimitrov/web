@@ -1,0 +1,15 @@
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 2svh;
+  grid-column-gap: 2svw;
+}
+
+.main-container-title {
+  grid-row-start: 0;
+  grid-column-start: 0;
+  grid-column-end: span 3;
+
+  align-content: center;
+}

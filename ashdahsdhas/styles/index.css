@@ -1,0 +1,9 @@
+.menu-controls {
+  position: absolute;
+  left: 45svw;
+  top: 30svh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10svh;
+  align-items: center;
+}
