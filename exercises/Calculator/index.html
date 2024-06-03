@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="container-display">
+        <div class="display-1">
+          <p id="num1"></p>
+        </div>
+        <div class="display-2">
+          <p id="operrand"></p>
+        </div>
+        <div class="display-3">
+          <p id="num2"></p>
+        </div>
+      </div>
+      <div class="container-controls">
+        <button onclick="GenericBtnPress(this)" class="controls-button s1-1">
+          DEL
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button s1-4">
+          C
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          +
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          -
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          *
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          7
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          8
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          9
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button s3-4">
+          /
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          4
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          5
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          6
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          1
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          2
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          3
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button s6-1">
+          0
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button">
+          .
+        </button>
+        <button onclick="GenericBtnPress(this)" class="controls-button s5-4">
+          =
+        </button>
+      </div>
+    </div>
+    <div class="container-output">
+      <h2>Output:</h2>
+      <p id="output"></p>
+    </div>
+  </body>
+  <script src="prep.js"></script>
+  <script src="script.js"></script>
+</html>
