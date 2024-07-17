@@ -1,7 +1,8 @@
 :root {
   --background-color: rgb(51, 51, 51);
   --font-color: white;
-  --border-color: white;
+  --border: 2px solid white;
+  --border-radius: 5px;
 }
 
 body,
@@ -12,9 +13,49 @@ body,
 
 body {
   background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 a:link,
 a:visited {
   color: hotpink;
+}
+
+.genericBtn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genericBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.genericBtn:active {
+  background-color: #004080;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.genericBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.lobbyBtn {
+  width: 100px;
+}
+
+.lobbyDropDown {
+  width: 100px;
+  cursor: pointer;
 }

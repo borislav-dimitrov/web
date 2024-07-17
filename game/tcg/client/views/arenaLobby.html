@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCG Arena Lobby</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/arenaLobby.css" />
+    <script type="module" src="../static/js/auth.js"></script>
+    <script type="module" src="../static/js/lobbyControls.js"></script>
+  </head>
+  <body>
+    <div class="lobby-overlay" id="lobbyOverlay">
+      <div class="lobby-overlay-content" id="lobby-overlay-content">
+        <div class="sel-arena-type">
+          <label for="ArenaType">Select arena type:</label>
+          <select class="lobbyDropDown" name="ArenaType" id="selArenaType">
+            <option value="1v1">1v1</option>
+            <option value="2v2">2v2</option>
+            <option value="3v3">3v3</option>
+            <option value="4v4">4v4</option>
+          </select>
+        </div>
+
+        <div class="sel-arena-type-controls">
+          <button class="genericBtn lobbyBtn" id="lobbyConfirm">Create</button>
+          <button class="genericBtn lobbyBtn" id="lobbyCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="arena-rooms-main">
+      <div class="arena-rooms"></div>
+      <div class="arena-rooms-controls">
+        <button class="genericBtn lobbyBtn" id="lobbyCreate">Create</button>
+        <button class="genericBtn lobbyBtn" id="lobbyJoin">Join</button>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    import authModule from "../static/js/auth.js";
+    import lobbyControlModule from "../static/js/lobbyControls.js";
+
+    authModule.fullAuthentication();
+
+    document.getElementById("lobbyCreate").addEventListener("click", () => {
+      lobbyControlModule.showArenaCreateLobbyOverlay();
+    });
+    document.getElementById("lobbyCancel").addEventListener("click", () => {
+      lobbyControlModule.hideArenaCreateLobbyOverlay();
+    });
+    document.getElementById("lobbyConfirm").addEventListener("click", () => {
+      lobbyControlModule.createLobby(
+        document.getElementById("selArenaType").value
+      );
+    });
+  </script>
+</html>

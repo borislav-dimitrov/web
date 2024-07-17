@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const auth = require("../services/auth");
 
 // Function to read JSON file
 const loadUsersFromFile = () => {
@@ -22,14 +23,20 @@ const getUserByName = (userName) => {
   return user;
 };
 
-const authUser = (userName, passWord) => {
+const logInUser = (userName, passWord) => {
+  let result = {
+    user: null,
+    sessionID: null,
+  };
   const users = loadUsersFromFile();
   const user = users.find(
     (user) =>
       user.userName.toLowerCase() === userName.toLowerCase() &&
       user.passWord === passWord
   );
-  return user;
+  result.user = user;
+  result.sessionID = auth.getToken();
+  return result;
 };
 
 const generateUserID = () => {
@@ -75,6 +82,6 @@ const registerUser = (userName, passWord) => {
 module.exports = {
   loadUsersFromFile,
   getUserByID,
-  authUser,
+  logInUser,
   registerUser,
 };

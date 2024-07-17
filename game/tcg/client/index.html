@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Index</title>
+    <script type="module" src="static/js/session.js"></script>
   </head>
   <body></body>
-  <script src="static/js/loginUtils.js"></script>
-  <script>
-    VerifyUser();
+  <script type="module">
+    import authModule from "./static/js/auth.js";
+
+    authModule.verifyUserLocal();
+    location.replace("views/town.html");
   </script>
 </html>

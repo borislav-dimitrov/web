@@ -1,0 +1,62 @@
+.arena-rooms-main {
+  display: flex;
+  flex-direction: column;
+
+  width: 60svw;
+  gap: 1svh;
+
+  padding-left: 1svw;
+  padding-right: 1svw;
+  padding-top: 1svh;
+  padding-bottom: 1svh;
+}
+
+.arena-rooms {
+  width: 100%;
+  height: 70svh;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.arena-rooms-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1svw;
+}
+
+.lobby-overlay {
+  position: fixed; /* Stay in place */
+  top: 0; /* Stay at the top */
+  left: 0; /* Stay at the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+  z-index: 1000; /* Sit on top */
+  display: none; /* Hidden by default */
+}
+
+.lobby-overlay-content {
+  height: 80svh;
+  width: 100svw;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2svh;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 1svw;
+  padding-right: 1svw;
+  padding-top: 1svh;
+  padding-bottom: 1svh;
+}
+
+.sel-arena-type-controls,
+.sel-arena-type {
+  display: flex;
+  gap: 1svw;
+}

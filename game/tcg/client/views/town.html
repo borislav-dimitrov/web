@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCG Town</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/town.css" />
+    <script type="module" src="../static/js/cookies.js"></script>
+    <script type="module" src="../static/js/session.js"></script>
+    <script type="module" src="../static/js/auth.js"></script>
+    <script type="module" src="../static/js/town.js"></script>
+  </head>
+  <body>
+    <div class="lobby-main">
+      <div class="header-container">
+        <h1 id="marked">Hello,</h1>
+        <button type="button" class="genericBtn" id="logOutBtn">Logout</button>
+      </div>
+      <div class="buildings-container">
+        <button id="TownHallBtn" class="genericBtn buildingBtn">
+          Town Hall
+        </button>
+        <button id="ArenaBtn" class="genericBtn buildingBtn">Arena</button>
+        <button id="AuctionHouseBtn" class="genericBtn buildingBtn">
+          Auction House
+        </button>
+        <button id="DungeonsBtn" class="genericBtn buildingBtn">
+          Dungeons
+        </button>
+        <button id="RaidsBtn" class="genericBtn buildingBtn">Raids</button>
+        <button id="ExpeditionsBtn" class="genericBtn buildingBtn">
+          Expeditions
+        </button>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    import cookieModule from "../static/js/cookies.js";
+    import authModule from "../static/js/auth.js";
+    import sessModule from "../static/js/session.js";
+    import townModule from "../static/js/town.js";
+
+    authModule.fullAuthentication();
+
+    document.getElementById("logOutBtn").addEventListener("click", () => {
+      sessModule.logOut();
+    });
+
+    document.getElementById("TownHallBtn").addEventListener("click", () => {
+      townModule.goTo("TownHall");
+    });
+    document.getElementById("ArenaBtn").addEventListener("click", () => {
+      townModule.goTo("Arena");
+    });
+    document.getElementById("AuctionHouseBtn").addEventListener("click", () => {
+      townModule.goTo("AuctionHouse");
+    });
+    document.getElementById("DungeonsBtn").addEventListener("click", () => {
+      townModule.goTo("Dungeons");
+    });
+    document.getElementById("RaidsBtn").addEventListener("click", () => {
+      townModule.goTo("Raids");
+    });
+    document.getElementById("ExpeditionsBtn").addEventListener("click", () => {
+      townModule.goTo("Expeditions");
+    });
+
+    document.getElementById("marked").textContent += ` ${cookieModule.getCookie(
+      cookieModule.USERCOOKIE
+    )}!`;
+  </script>
+</html>
