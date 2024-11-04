@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#treeview {
+  margin: 20px;
+}
+
+ul,
+#treeview ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.tree-node {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.tree-node::before {
+  content: "▶";
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tree-node.expanded::before {
+  content: "▼";
+}
+
+.tree-node ul {
+  display: none;
+}
+
+.tree-node.expanded ul {
+  display: block;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 5px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+      }
+      th {
+        padding: 5px;
+        background-color: rgb(141, 79, 2);
+        color: white;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+      }
+      tr {
+        border: 2px solid black;
+        background-color: rgb(253, 179, 40);
+        color: black;
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(189, 131, 25);
+      }
+      tr:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Hero</td>
+        <td>5t</td>
+      </tr>
+      <tr>
+        <td>Sky</td>
+        <td>3y</td>
+      </tr>
+      <tr>
+        <td>3rd kitty :D</td>
+        <td>1y</td>
+      </tr>
+      <tr>
+        <td>4rd kitty :D</td>
+        <td>2y</td>
+      </tr>
+    </table>
+
+    <br /><br />
+    <button type="button" onclick="alabala()">test</button>
+  </body>
+
+  <script>
+    function alabala() {
+      console.log("test");
+    }
+  </script>
+</html>
